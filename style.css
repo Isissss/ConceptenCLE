@@ -1,0 +1,30 @@
+* {
+
+}
+
+body {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer {
+    background: #72cc50;
+    object-fit: cover;
+    margin:0;
+    width: 70%;
+    padding: 0;
+}
+
+.banner {
+    background-image: url("/images/city.png");
+    background-repeat: repeat;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 70%;
+    overflow:hidden;
+}
+.banner img {
+    display: block;
+}

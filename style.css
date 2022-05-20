@@ -1,5 +1,7 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Rubik:wght@300&display=swap');
 
+* {
+    font-family: "Roboto","Arial",sans-serif;
 }
 .preview {
     display: grid;
@@ -9,7 +11,7 @@
     justify-items: center;
     /*border-radius: 60px;*/
     width: 70vw;
-    padding-top: 10px;
+    margin: 10px;
 
 }
 body {
@@ -34,7 +36,8 @@ margin-top: 10px;
 
 }
 #deel2, #deel3 {
-    height: 20vh;
+    height: 40vh;
+    margin: 50px 0;
 }
 .grid {
 
@@ -62,7 +65,8 @@ li a {
 
     text-align: center;
     padding: 14px 16px;
-    color: #42AC26;
+    /*color: #42AC26;*/
+    color: #1DBDC9;
     text-decoration: none;
 }
 
@@ -86,29 +90,34 @@ max-width: 31px;
     justify-items: center;
     justify-content: center;
 }
+
 .preview i {
-    color: #4fd507;
+    /*color: #4fd507;*/
+    color: #1DBDC9;
 }
 .banner {
+    width: 70vw;
     background-image: url("/images/city.png");
     background-repeat: repeat;
     display: block;
     margin: 0;
     padding: 0;
+
     overflow:hidden;
-    width: 100vw;
+
 }
 .banner img {
     display: block;
-
     overflow: hidden;
 }
 
+
+
 footer {
-    background: #42AC26;
+  /*background: #42AC26;*/
     object-fit: cover;
     margin:0;
-    width: 100vw;
+    width: 70vw;
     height: 10vh;
     padding: 0;
 }
@@ -120,7 +129,8 @@ max-width: 50vw;
 }
 
 header {
-    background: #4fd507;
+    /*background: #4fd507;*/
+    background: #00ABBD;
     width: 100vw;
     display: flex;
     justify-content: center;

@@ -74,7 +74,7 @@ section p {
     width: 100%;
 }
 
-ul {
+.navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -88,11 +88,11 @@ nav {
     font-weight: bold;
 }
 
-li {
+nav div {
     float: left;
 }
 
-li a {
+nav div a {
     display: block;
 
     text-align: center;

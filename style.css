@@ -9,7 +9,16 @@
 
 h1 {
     position: absolute;
+color: white;
+}
 
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 
 .mySlides {
@@ -19,18 +28,27 @@ h1 {
 
 img {
     vertical-align: middle;
+    max-width: 100%;
 }
 
 #overons {
     display: flex;
 }
 
+#showcase {
+    display: flex;
+}
+
 .slideshow {
-    width: 50%;
+    width: 100%;
 }
 
 .slideshow img {
-    width: 100%;
+    width: 50%;
+}
+
+#preview {
+    max-width: 70vw;
 }
 
 /* Slideshow container */
@@ -38,7 +56,7 @@ img {
     max-width: 100%;
     position: relative;
     display: block;
-    margin: auto 15px auto auto;
+    margin: 20px 15px auto auto;
 }
 
 /* Next & previous buttons */
@@ -149,13 +167,17 @@ body {
     padding: 0;
 }
 
-#hetspel {
+#showcase {
     background: #f5f3f3;
 
 }
 
-#inleiding, #hetspel {
+#inleiding {
     background: #f5f3f3;
+}
+
+#inleiding, #hetspel {
+
 
     display: flex;
     flex-direction: row;
@@ -192,19 +214,41 @@ h2 {
     max-width: 100%;
 }
 
-#inleiding, #hetspel, #overons {
-    min-height: 40vh;
+#inleiding, #hetspel, #overons, #showcase {
+
     width: 100%;
     padding: 5% 15%;
 
 }
-#hetspel{
+
+.grid figure {
+    margin: 0;
+    padding: 0 0 0 25px;
+    max-width: 60%;
+}
+
+.grid {
+    display: flex;
+}
+
+.grid img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.kwart {
+    width: 40%;
+}
+
+#bijdrage {
     background: #0E5E62;
 }
 
-#hetspel {
-    color:white;
+#bijdrage {
+    color: white;
 }
+
 section p, section li {
     line-height: 1.5em;
 }
@@ -225,7 +269,7 @@ nav ul, footer ul {
 }
 
 nav {
-    width: 80%;
+    width: 73%;
     font-family: Arial, serif;
     font-weight: bold;
 }
@@ -258,7 +302,7 @@ li a:hover {
     font-size: 3em;
     text-align: center;
     justify-content: center;
-    color: #00ABBD;
+    color: #53f35b;
     /*color: #4fd507;*/
 }
 
@@ -322,7 +366,7 @@ footer {
     /*background: #42AC26;*/
     object-fit: cover;
     margin: 0;
-    background: #f5f3f3;
+    background: #0E5E62;
     height: 15vh;
     width: 100%;
     font-size: 1.2em;
@@ -337,10 +381,11 @@ footer {
 
 footer li {
     margin: 0 20px;
+    color: white;
 }
 
 footer li a {
-    color: #0E5E62;
+    color: white;
     text-decoration: none;
 
 }
@@ -349,7 +394,7 @@ footer i {
     font-size: 1.2em;
 }
 
-#half {
+.half {
     width: 60%;
 }
 
@@ -357,19 +402,26 @@ footer i {
     width: 25%;
 }
 
-  #inleiding h2 {
+#inleiding h2 {
 
     color: #0C5B5F;
 }
 
-#bijdrage h2, #overons h2 {
+#overons h2 {
     color: #0F7F85;
+}
+
+.photo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 30px;
 }
 
 .contact a {
     display: inline-block;
     border-radius: 4px;
-    background-color: #0F7F85;
+    background-color: #0b5357;
     border: none;
     color: #FFFFFF;
     text-align: center;

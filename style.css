@@ -1,15 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Rubik:wght@300&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+:root {
+    --maincolor: #042153;
+    --lighter: rgba(70, 99, 190, 0.23);
+    --lighest: #8d8afe;
+    --white: #FFF;
+    --accents: #ff4166;
 
+}
 * {
     font-family: "Roboto", "Arial", sans-serif;
     box-sizing: border-box;
 }
 
 h1 {
-    position: absolute;
-color: white;
+
+    color: white;
+
+
+    font-size: 3em;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+
+.title {
+    align-items: center;
+display: flex;
+flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -37,113 +59,15 @@ img {
 
 #showcase {
     display: flex;
+    flex-direction: column;
+    justify-items: center;
 }
 
-.slideshow {
-    width: 100%;
-}
-
-.slideshow img {
-    width: 50%;
-}
 
 #preview {
     max-width: 70vw;
 }
 
-/* Slideshow container */
-.slideshow-container {
-    max-width: 100%;
-    position: relative;
-    display: block;
-    margin: 20px 15px auto auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Caption text */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-
-    position: absolute;
-    top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-    background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-    .prev, .next, .text {
-        font-size: 11px
-    }
-}
 
 .preview {
     display: grid;
@@ -167,18 +91,13 @@ body {
     padding: 0;
 }
 
-#showcase {
-    background: #f5f3f3;
-
-}
-
-#inleiding {
-    background: #f5f3f3;
+#showcase, #inleiding {
+    background: var(--lighter)
 }
 
 #inleiding, #hetspel {
 
-
+    color: black;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -191,9 +110,23 @@ body {
 
 }
 
-h1 {
-    font-size: 2em;
-    color: #000000;
+
+h3 {
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 3px;
+}
+
+#showcase h3 {
+
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-size: 17px;
 }
 
 h2 {
@@ -208,6 +141,7 @@ h2 {
     width: 100%;
     padding-left: 0;
     margin-left: 0;
+
 }
 
 #inleiding img, #hetspel img {
@@ -223,8 +157,9 @@ h2 {
 
 .grid figure {
     margin: 0;
-    padding: 0 0 0 25px;
-    max-width: 60%;
+    max-width: 50%;
+    padding: 0 25px 0 0;
+    margin-bottom: 25px;
 }
 
 .grid {
@@ -242,10 +177,7 @@ h2 {
 }
 
 #bijdrage {
-    background: #0E5E62;
-}
-
-#bijdrage {
+    background: var(--maincolor);
     color: white;
 }
 
@@ -259,24 +191,28 @@ section p, section li {
     width: 100%;
 }
 
+
 nav ul, footer ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-
-
 }
 
 nav {
-    width: 73%;
+    width: 100%;
     font-family: Arial, serif;
     font-weight: bold;
+    background: var(--maincolor);
+    color:var(--accents);
 }
-
+.accent {
+    color:var(--accents);
+    font-weight: bold;
+}
 nav li, footer li {
     float: left;
-    color: #0E5E62;
+
 
 }
 
@@ -285,7 +221,7 @@ nav li a {
     text-align: center;
     padding: 14px 16px;
     /*color: #42AC26;*/
-    color: #117278;
+    color:var(--accents);
     text-decoration: none;
 }
 
@@ -295,6 +231,8 @@ li a:hover {
 
 .undertitle {
     margin-top: 0;
+    color:white;
+    font-style: italic;
 }
 
 .preview .container i {
@@ -302,7 +240,7 @@ li a:hover {
     font-size: 3em;
     text-align: center;
     justify-content: center;
-    color: #53f35b;
+    color: var(--lighest);
     /*color: #4fd507;*/
 }
 
@@ -330,16 +268,23 @@ li a:hover {
 
 header figure {
     margin: 0;
+
     padding: 0;
+    text-align: right;
+
 }
 
 header figure img {
-    max-width: 100%;
+    background: var(--maincolor);
     display: block;
     margin: 0;
     padding: 0;
+    text-align: right;
 }
-
+.bannerpic {
+  position: relative;
+    left:  0%;
+}
 #bijdrage {
     display: flex;
     flex-direction: column;
@@ -347,18 +292,26 @@ header figure img {
     padding: 50px 0;
 }
 
-#bijdrage h2 {
+#bijdrage h2, #showcase h2 {
     padding: 0;
     margin: 0 0 7px;
 }
 
+#test {
+    position: absolute;
+    right: 12.5%;
+    max-height: 90vh
+}
+
 header {
-    /*background: #4fd507;*/
-    background: #00ABBD;
     width: 100%;
+    padding-bottom: 30px;
+    background: var(--maincolor);
+    text-align: right;
     display: flex;
-    justify-content: center;
-    justify-items: center;
+
+    justify-content: space-evenly;
+
 
 }
 
@@ -366,7 +319,7 @@ footer {
     /*background: #42AC26;*/
     object-fit: cover;
     margin: 0;
-    background: #0E5E62;
+    background: var(--maincolor);
     height: 15vh;
     width: 100%;
     font-size: 1.2em;
@@ -377,7 +330,9 @@ footer {
 
 
 }
-
+nav ul {
+   padding-left:60%
+}
 
 footer li {
     margin: 0 20px;
@@ -402,13 +357,14 @@ footer i {
     width: 25%;
 }
 
-#inleiding h2 {
+#inleiding h2, #showcase h2 {
 
     color: #0C5B5F;
 }
 
-#overons h2 {
-    color: #0F7F85;
+
+#overons h2, #hetspel h2 {
+    color: var(--lighest);
 }
 
 .photo {
@@ -421,8 +377,9 @@ footer i {
 .contact a {
     display: inline-block;
     border-radius: 4px;
-    background-color: #0b5357;
+    background-color: var(--accents);
     border: none;
+    font-weight: bold;
     color: #FFFFFF;
     text-align: center;
     font-size: 20px;
@@ -436,7 +393,9 @@ footer i {
 .contact a span {
     cursor: pointer;
     display: inline-block;
+    color: #FFFFFF;
     position: relative;
+    font-weight: bold;
     transition: 0.5s;
 }
 
@@ -445,12 +404,15 @@ footer i {
     position: absolute;
     opacity: 0;
     top: 0;
+    font-weight: bold;
+    color: #FFFFFF;
     right: -20px;
     transition: 0.5s;
 }
 
 .contact a:hover span {
     padding-right: 25px;
+    color: #FFFFFF;
 }
 
 .contact a:hover span:after {
